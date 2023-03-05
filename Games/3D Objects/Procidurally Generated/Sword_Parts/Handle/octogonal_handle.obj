@@ -1,0 +1,56 @@
+o sword_handle
+
+#Bottom (Built Clockwise)
+v -1.000 +0.000 +0.000 #Left 1
+v -0.707 +0.000 +0.707 #Back Left 2
+v +0.000 +0.000 +1.000 #Back 3
+v +0.707 +0.000 +0.707 #Back Right 4
+v +1.000 +0.000 +0.000 #Right 5
+v +0.707 +0.000 -0.707 #Front Right 6
+v +0.000 +0.000 -1.000 #Front 7
+v -0.707 +0.000 -0.707 #Front Left 8
+
+#Top (Built Clockwise)
+v -1.000 +5.000 +0.000 #Left 9
+v -0.707 +5.000 +0.707 #Back Left 10
+v +0.000 +5.000 +1.000 #Back 11
+v +0.707 +5.000 +0.707 #Back Right 12
+v +1.000 +5.000 +0.000 #Right 13
+v +0.707 +5.000 -0.707 #Front Right 14
+v +0.000 +5.000 -1.000 #Front 15
+v -0.707 +5.000 -0.707 #Front Left 16
+
+#f1 = (last1) (next1) (last2)
+#f2 = (next1) (next2) (last2)
+
+#Back Left 1
+f 1 2 9
+f 2 10 9
+
+#Back Left 2
+f 2 3 10
+f 3 11 10
+
+#Back Right 1
+f 3 4 11
+f 4 12 11
+
+#Back Right 2
+f 4 5 12
+f 5 13 12
+
+#Front Right 1
+f 5 6 13
+f 6 14 13
+
+#Front Right 2
+f 6 7 14
+f 7 15 14
+
+#Front Left 1
+f 7 8 15
+f 8 16 15
+
+#Front Left 2
+f 8 1 16
+f 1 9 16

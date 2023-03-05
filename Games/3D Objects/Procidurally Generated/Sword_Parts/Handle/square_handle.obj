@@ -1,0 +1,29 @@
+o sword_handle
+
+#Bottom (Built Clockwise)
+v -1.000 +0.000 +0.000 #Left 1
+v +0.000 +0.000 +1.000 #Back 2
+v +1.000 +0.000 +0.000 #Right 3
+v +0.000 +0.000 -1.000 #Front 4
+
+#Top (Built Clockwise)
+v -1.000 +5.000 +0.000 #Left 5
+v +0.000 +5.000 +1.000 #Back 6
+v +1.000 +5.000 +0.000 #Right 7
+v +0.000 +5.000 -1.000 #Front 8
+
+#Back Left
+f 1 2 5
+f 2 6 5
+
+#Back Right
+f 2 3 6
+f 3 7 6
+
+#Front Right
+f 3 4 7
+f 4 8 7
+
+#Front Left
+f 4 1 8
+f 1 5 8

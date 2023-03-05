@@ -1,0 +1,126 @@
+o sword
+
+s off
+
+#Inferior Pommel
+v -1.00 +0.00 +0.00 #Left 1
+v +0.00 +0.00 +1.00 #Back 2
+v +1.00 +0.00 +0.00 #Right 3
+v +0.00 +0.00 -1.00 #Front 4
+
+#Bottom Pommel Face
+f 1 3 2
+f 3 1 4
+
+#Superior Pommel
+v -0.50 +0.50 +0.00 #Left 5
+v +0.00 +0.50 +0.50 #Back 6
+v +0.50 +0.50 +0.00 #Right 7
+v +0.00 +0.50 -0.50 #Front 8
+
+#Left Back Pommel Face
+f 1 6 5
+f 1 2 6
+
+#Left Front Pommel Face
+f 1 5 8
+f 1 8 4
+
+#Right Back Pommel Face
+f 2 3 7
+f 2 7 6
+
+#Right Front Pommel Face
+f 4 7 3
+f 4 8 7
+
+#Superior Grip
+v -0.50 +3.50 +0.00 #Left 9
+v +0.00 +3.50 +0.50 #Back 10
+v +0.50 +3.50 +0.00 #Right 11
+v +0.00 +3.50 -0.50 #Front 12
+
+#Left Back Grip Face
+f 5 10 9
+f 5 6 10
+
+#Left Front Grip Face
+f 5 9 12
+f 5 12 8
+
+#Right Back Grip Face
+f 6 7 11
+f 6 11 10
+
+#Right Front Grip Face
+f 8 11 7
+f 8 12 11
+
+#Middle Guard
+v -1.00 +4.00 +0.00 #Left 13
+v +0.00 +4.00 +1.00 #Back 14
+v +1.00 +4.00 +0.00 #Right 15
+v +0.00 +4.00 -1.00 #Front 16
+
+#Left Back Guard Face
+f 9 14 13
+f 9 10 14
+
+#Left Front Guard Face
+f 9 13 16
+f 9 16 12
+
+#Right Back Guard Face
+f 10 11 15
+f 10 15 14
+
+#Right Front Guard Face
+f 12 15 11
+f 12 16 15
+
+#Middle Guard Complement
+v -1.25 +4.75 +0.00 #Left 17
+v +0.00 +4.50 +0.50 #Back 18
+v +1.25 +4.75 +0.00 #Right 19
+v +0.00 +4.50 -0.50 #Front 20
+
+#Left Guard
+v -4.00 +5.00 +0.00 #Far Left 21
+
+#Left Top Guard Face
+f 21 17 20
+f 21 18 17
+
+#Left Front Guard Face
+f 21 20 16
+f 21 16 13
+
+#Left Back Guard Face
+f 21 14 18
+f 21 13 14
+
+#Right Guard
+v +4.00 +5.00 +0.00 #Far Left 22
+
+#Right Top Guard Face
+f 22 20 19
+f 22 19 18
+
+#Right Front Guard Face
+f 22 16 20
+f 22 15 16
+
+#Right Back Guard Face
+f 22 18 14
+f 22 14 15
+
+#Blade Tip
+v +0.00 +20.00 +0.00 #Top Middle 23
+
+#Left Blade
+f 23 17 18
+f 23 20 17
+
+#Right Blade
+f 23 18 19
+f 23 19 20
