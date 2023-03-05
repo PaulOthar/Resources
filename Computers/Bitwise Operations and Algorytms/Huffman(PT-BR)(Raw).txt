@@ -1,0 +1,228 @@
+Algoritmo de Huffman(Exemplo Funcional)
+
+Frase a Comprimir: "Maria tinha um Carneirinho Chamado Jorge"
+
+Primeiro Extraimos as Frequências de Cada Letra:
+
+'m' = 2
+'a' = 6
+'r' = 4
+'i' = 4
+' ' = 5
+'t' = 1
+'n' = 3
+'h' = 3
+'u' = 1
+'c' = 2
+'e' = 2
+'o' = 3
+'d' = 1
+'j' = 1
+'g' = 1
+
+Depois Organizamos todas as Frequencias por valor:
+
+'a' = 6
+' ' = 5
+'r' = 4
+'i' = 4
+'n' = 3
+'h' = 3
+'o' = 3
+'m' = 2
+'c' = 2
+'e' = 2
+'t' = 1
+'u' = 1
+'d' = 1
+'j' = 1
+'g' = 1
+
+Por Fim, Recursivamente, Faremos Grupos com as menores frequências (2 Por vez), sempre colocando a junção das duas de volta na lista:
+
+'a' = 6
+' ' = 5
+'r' = 4
+'i' = 4
+'n' = 3
+'h' = 3
+'o' = 3
+'m' = 2
+'c' = 2
+'e' = 2
+('j','g') = 2
+'t' = 1
+'u' = 1
+'d' = 1
+
+2º Iteração:
+
+'a' = 6
+' ' = 5
+'r' = 4
+'i' = 4
+'n' = 3
+'h' = 3
+'o' = 3
+('u','d') = 2
+('j','g') = 2
+'m' = 2
+'c' = 2
+'e' = 2
+'t' = 1
+
+3º Iteração:
+
+'a' = 6
+' ' = 5
+'r' = 4
+'i' = 4
+('t','e') = 3
+'n' = 3
+'h' = 3
+'o' = 3
+('u','d') = 2
+('j','g') = 2
+'m' = 2
+'c' = 2
+
+4º Iteração:
+
+'a' = 6
+' ' = 5
+('c','m') = 4
+'r' = 4
+'i' = 4
+('t','e') = 3
+'n' = 3
+'h' = 3
+'o' = 3
+('u','d') = 2
+('j','g') = 2
+
+5º Iteração:
+
+'a' = 6
+' ' = 5
+(('j','g'),('u','d')) = 4
+('c','m') = 4
+'r' = 4
+'i' = 4
+('t','e') = 3
+'n' = 3
+'h' = 3
+'o' = 3
+
+6º Iteração:
+
+('o','h') = 6
+'a' = 6
+' ' = 5
+(('j','g'),('u','d')) = 4
+('c','m') = 4
+'r' = 4
+'i' = 4
+('t','e') = 3
+'n' = 3
+
+7º Iteração:
+
+('n',('t','e')) = 6
+('o','h') = 6
+'a' = 6
+' ' = 5
+(('j','g'),('u','d')) = 4
+('c','m') = 4
+'r' = 4
+'i' = 4
+
+8º Iteração:
+
+('i','r') = 8
+('n',('t','e')) = 6
+('o','h') = 6
+'a' = 6
+' ' = 5
+(('j','g'),('u','d')) = 4
+('c','m') = 4
+
+9º Iteração:
+
+(('c','m'),(('j','g'),('u','d'))) = 8
+('i','r') = 8
+('n',('t','e')) = 6
+('o','h') = 6
+'a' = 6
+' ' = 5
+
+10º Iteração:
+
+(' ','a') = 11
+(('c','m'),(('j','g'),('u','d'))) = 8
+('i','r') = 8
+('n',('t','e')) = 6
+('o','h') = 6
+
+11º Iteração:
+
+(('o','h'),('n',('t','e'))) = 12
+(' ','a') = 11
+(('c','m'),(('j','g'),('u','d'))) = 8
+('i','r') = 8
+
+12º Iteração:
+
+(('i','r'),(('c','m'),(('j','g'),('u','d')))) = 16
+(('o','h'),('n',('t','e'))) = 12
+(' ','a') = 11
+
+13º Iteração:
+
+((' ','a'),(('o','h'),('n',('t','e')))) = 23
+(('i','r'),(('c','m'),(('j','g'),('u','d')))) = 16
+
+14º Iteração(Final)
+
+((('i','r'),(('c','m'),(('j','g'),('u','d')))),((' ','a'),(('o','h'),('n',('t','e')))))
+
+Parece Confuso, né? Mas não tema, isto é uma árvore Binária, Vamos Representa-la:
+
+                             (039)
+             ┌─────────────────┴─────────────────┐
+           (023)                               (016)
+     ┌───────┴───────┐                  ┌────────┴────────┐
+   (011)           (012)              (008)             (008)
+  ┌──┴──┐      ┌─────┴─────┐         ┌──┴──┐      ┌───────┴───────┐
+(' ') ('a')  (006)       (006)     ('i') ('r')  (004)           (004)
+            ┌──┴──┐     ┌──┴──┐                ┌──┴──┐      ┌─────┴─────┐  
+          ('o') ('h') ('n') (003)            ('c') ('m')  (002)       (002)
+                           ┌──┴──┐                       ┌──┴──┐     ┌──┴──┐
+                         ('t') ('e')                   ('j') ('g') ('d') ('u')
+
+
+Agora Vamos Codificar Cada Caractere, baseado na arvore, sendo Esquerda 0, e Direita 1:
+
+
+'a' = 001
+' ' = 000
+'r' = 101
+'i' = 100
+'n' = 0110
+'h' = 0101
+'o' = 0100
+'m' = 1101
+'c' = 1100
+'e' = 01111
+'t' = 01110
+'u' = 11111
+'d' = 11110
+'j' = 11100
+'g' = 11101
+
+Note que os Caracteres mais usados, custam bem menos, em termos de Bits.
+
+Vamos montar o Stream de Bits Baseado na Lista codificada, e a frase original:
+
+1101001101100001000011101000110010100100011111110100011000011010110011111001011000110010101000001100010100111010011111001000001110001001011110101111
+
+Totalizou 148 Bits!, isso significa 18.5 Bytes.
