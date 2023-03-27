@@ -5,10 +5,7 @@ With this document, im planning to solve this problem.
 
 Lets draw a 3x3 Maze:
 
-┌┬┬┐
-├┼┼┤
-├┼┼┤
-└┴┴┘
+![image](https://user-images.githubusercontent.com/64809360/227978717-2e4682de-dbf6-457d-8a10-87c684693f6b.png)
 
 Notice that there is 9 squares in it, and most of them share walls between them.
 
@@ -34,15 +31,13 @@ the same goes for the bottom wall definition, we dont need to specify the top wa
 
 the end result is this:
 
-└
+![image](https://user-images.githubusercontent.com/64809360/227978925-1ad97114-ad09-4e64-96c6-9d782dcdd3f9.png)
 
 we can represent it as a 2 Bit structure, being the 0b10 bit the left wall, and the 0b01 bit the bottom wall.
 
 Lets go back to the 3x3 Maze, with this new logic, it would look like this:
 
-└└└
-└└└
-└└└
+![image](https://user-images.githubusercontent.com/64809360/227979227-7489584f-d1ea-4069-be97-c5f8eebdc8ea.png)
 
 you may notice that the left and bottom data are redundant relative to the edges of the grid... i havent figured out a way to optimize it yet.
 
