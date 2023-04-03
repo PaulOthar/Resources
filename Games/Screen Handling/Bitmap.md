@@ -22,6 +22,7 @@ the way the collection is manipulated, may vary between project needs and progra
 in this document i will explain how i use it.
 
 Lets analyse this picture:
+
 ![image](https://user-images.githubusercontent.com/64809360/229396397-2887dfe9-b68f-4a3a-856a-232886be09bf.png)
 
 imagine that each square in this matrix, is an integer...
