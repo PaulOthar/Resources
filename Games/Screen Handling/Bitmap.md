@@ -22,7 +22,7 @@ the way the collection is manipulated, may vary between project needs and progra
 in this document i will explain how i use it.
 
 Lets analyse this picture:
-IMAGE
+![image](https://user-images.githubusercontent.com/64809360/229396397-2887dfe9-b68f-4a3a-856a-232886be09bf.png)
 
 imagine that each square in this matrix, is an integer...
 so... the natural way of thinking is to use an integer matrix... right?
@@ -31,13 +31,13 @@ Not in my case, i like to represent it as a Single Array of Integer!
 
 "How?" you may ask... Well... its simple, lets slice this matrix by it rows.
 
-IMAGE
+![image](https://user-images.githubusercontent.com/64809360/229396425-a27df37d-3548-41e0-8227-80ef654af42b.png)
 
 Notice how this slice maintains the width, but now the height is 1, as well as the others.
 
 Lets fit the next Row, right after this one we have:
 
-IMAGE
+![image](https://user-images.githubusercontent.com/64809360/229396650-a0571664-f74d-46b2-8e23-7a3a9bb023ed.png)
 
 Notice how each Row is separated by the length of the Width.
 this is what i use to understand and manage the bitmap.
