@@ -12,15 +12,15 @@ Practical Example: Chess
 
 Imagine the following bitwise:
 
-Empty = x000 = 0
-Pawn = x001 = 1
-Horse = x010 = 2
-Bishop = x011 = 3
-Tower = x100 = 4
-Queen = x101 = 5
-King = x110 = 6
+Empty = x000 = 0<br>
+Pawn = x001 = 1<br>
+Horse = x010 = 2<br>
+Bishop = x011 = 3<br>
+Tower = x100 = 4<br>
+Queen = x101 = 5<br>
+King = x110 = 6<br>
 
-Black = 0xxx
+Black = 0xxx<br>
 White = 1xxx
 
 42356324
