@@ -12,13 +12,13 @@ Practical Example: Chess
 
 Imagine the following bitwise:
 
-Empty = x000 = 0<br>
-Pawn = x001 = 1<br>
-Horse = x010 = 2<br>
-Bishop = x011 = 3<br>
-Tower = x100 = 4<br>
-Queen = x101 = 5<br>
-King = x110 = 6<br>
+Empty = x000 = 0|8<br>
+Pawn = x001 = 1|9<br>
+Horse = x010 = 2|a<br>
+Bishop = x011 = 3|b<br>
+Tower = x100 = 4|c<br>
+Queen = x101 = 5|d<br>
+King = x110 = 6|e<br>
 
 Black = 0xxx<br>
 White = 1xxx
