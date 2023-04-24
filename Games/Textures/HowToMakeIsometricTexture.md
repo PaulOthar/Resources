@@ -2,7 +2,7 @@
 
 first get a image:
 
-![image](https://user-images.githubusercontent.com/64809360/233989606-1c7dc0bb-bd34-455e-be1b-c7baac0f0cb5.png)
+<img src="https://user-images.githubusercontent.com/64809360/233989606-1c7dc0bb-bd34-455e-be1b-c7baac0f0cb5.png" width="50px" heigth="50px">
 
 for each pixel of the image, make it a 2x2:
 
