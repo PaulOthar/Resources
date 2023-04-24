@@ -47,7 +47,7 @@ Keep in mind that some distortions are inevitable.
 
 4) Repeat:
 
-<img src="https://user-images.githubusercontent.com/64809360/233991241-9f3bb2a9-bc34-4446-9574-e419c2674583.png" heigth="50px">
+<img src="https://user-images.githubusercontent.com/64809360/233991241-9f3bb2a9-bc34-4446-9574-e419c2674583.png" width="50px" heigth="50px">
 
 Voilá, you have now a simple (wall) tile!
 Keep in mind that some distortions are inevitable.
